@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TAKE A BREAK - SIGN UP</title>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.css" rel="stylesheet">
+    <link href="sign.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="form-box">
+        <h1 id="title">Sign Up</h1>
+        <form id="signupForm">
+            <div class="input1" id="nameField">
+                <div class="input2">
+                    <i class="fa fa-user"></i>
+                    <input type="text" id="name" placeholder="Name" required>
+                </div>
+
+                <div class="input2">
+                    <i class="fa fa-envelope"></i>
+                    <input type="email" id="email" placeholder="Email" required>
+                </div>
+
+                <div class="input2">
+                    <i class="fa fa-key"></i>
+                    <input type="password" id="password" placeholder="Password (6 digits)" required>
+                </div>
+
+                <div class="input2">
+                    <i class="fa fa-key"></i>
+                    <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                </div>
+
+                <p>Lost password <a href="#"> Click Here!</a></p>
+            </div>
+            <br><br>
+            <div class="btn-input">
+                <button type="button" id="signupBtn">Sign up</button>
+                <button id="signinBtn" class="sign"><a href="../Log in/login.html">Sign in</a></button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+
+            // Use a regular expression to check if the password consists of 6 digits
+            var digitRegex = /^\d{6}$/;
+
+            if (!digitRegex.test(password)) {
+                alert("Password must be exactly 6 digits long and contain only numbers.");
+                return false;
+            }
+
+            // Check if the password and confirm password match
+            if (password !== confirmPassword) {
+                alert("Passwords do not match");
+                return false;
+            }
+
+            // Save user data in local storage (for demonstration purposes)
+            localStorage.setItem("user_name", name);
+            localStorage.setItem("user_email", email);
+            localStorage.setItem("user_password", password);
+
+            alert("Sign up successful. You can now log in.");
+            return true;
+        }
+
+        document.getElementById("signupBtn").addEventListener("click", validateForm);
+    </script>
+</body>
+</html>

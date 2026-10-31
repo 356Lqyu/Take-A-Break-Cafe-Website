@@ -1,0 +1,147 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("background5.jpg");
+    background-repeat:round;
+    padding-bottom: 100px;
+}
+h1 {
+    padding-top: 100px;
+    padding-left: 50px;
+    font-size: 30px;
+    text-align: center;
+}
+
+h2{
+    padding-top: 20px;
+    padding-left: 50px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.background{
+    background-image: url("background.jpg");
+    height: 55rem;
+    z-index: 9999;
+}
+.spincontainer{
+    margin-top: 98px;
+    margin-bottom: 10px;
+    width: 500px;
+    height: 500px;
+    left: 250px;
+    background-color: #3f51b5;
+    border-radius: 50%;
+    border:15px solid #dde;
+    position: relative;
+    overflow: hidden;
+    transition: 5s;
+}
+
+.spincontainer div{
+    height: 50%;
+    width: 200px;
+    position: absolute;
+    clip-path: polygon(100% 0 , 50% 100% , 0 0);
+    transform: translateX(-50%);
+    transform-origin: bottom;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-family: sans-serif;
+    color:#151010;
+    left:135px;
+    padding-bottom: 50px;
+}
+
+.arrow {
+    position: absolute;
+   top:520px;
+   left: 49%;
+   transform: translateX(-50%);
+   color: #ff0000;
+   font-size: 50px;
+}
+
+.arrow::before{
+    content: "↓"; 
+}
+
+
+#spin{
+    position: absolute;
+    top:840px;
+    left:49%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+    background-color:rgb(197, 194, 190);
+    text-transform: uppercase;
+    border:8px solid #fff;
+    font-weight: bold;
+    font-size: 20px;
+    color:#0b0606;
+    width: 80px;
+    height: 80px;
+    font-family: sans-serif;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    letter-spacing: 1px;
+}
+
+.spincontainer .one{
+    background-color: #EE6464;
+    transform: rotate(0deg);
+    transition: transform 10s;
+}
+
+.spincontainer .two{
+    background-color: #EEB764;
+    transform: rotate(45deg);
+}
+
+.spincontainer .three{
+    background-color:#E4EE64;
+    transform: rotate(90deg);
+}
+.spincontainer .four{
+    background-color:#77EE64;
+    transform: rotate(135deg);
+}
+.spincontainer .five{
+    background-color:burlywood;
+    transform: rotate(180deg);
+}
+.spincontainer .six{
+    background-color:#6495ed;
+    transform: rotate(225deg);
+}
+.spincontainer .seven{
+    background-color:#6D64EE;
+    transform: rotate(270deg);
+}
+.spincontainer .eight{
+    background-color:#BB64EE;
+    transform: rotate(315deg);
+}
+
+.back{
+    float:left;
+    border:1.5px solid black;
+    margin-top: 10px;
+    margin-left: 100px;
+    padding: 8px;
+    background-color: rgb(213,213,213);
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 4px;
+}
+
+.back a{
+    text-decoration: none;
+}
+

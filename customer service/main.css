@@ -1,0 +1,137 @@
+@charset "utf-8";
+
+html{
+    max-width: 1024px;
+    max-height: 768px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-image:url("background5.jpg");
+    background-attachment: fixed;
+    background-size: 100%;
+}
+
+header > nav {
+    transform: scale(0);
+    opacity: 0;
+    transition: transform 2s ease-in-out, opacity 2s ease-in-out;
+    animation: growAndFade 1s ease-in-out forwards;
+}
+
+
+ul,li{
+    padding-left: 18.5px;
+    display: flex;
+    float: left;
+    padding-right: 10px;
+    padding-top: 8px;
+    
+   }
+   
+   
+   .list,nav{
+    margin-left: 1px;
+       display: block;
+       float: left;
+       padding-left: 8px;
+       background-color: antiquewhite;
+       font-family: sans-serif;
+   
+   }
+   
+   .img{
+       padding-top: 8px;
+       padding-right: 10px;
+       padding-bottom: 8px;
+       float: left;
+       background-color: antiquewhite;
+   }
+
+@keyframes growAndFade {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+    opacity: 1;
+    animation: fadeIn 0.5s ease-in-out forwards; /* Use a CSS animation */
+  }
+
+a{
+    text-decoration:none;
+    font-family: 'Times New Roman', serif;
+}
+
+
+section{
+    background-image:url("background2.jpg");
+    background-repeat:round;
+    background-attachment:inherit;
+    background-attachment: fixed;
+    padding-bottom: 50px;
+}
+
+
+  
+.main {
+    margin-left: 200px; /* Same as the width of the sidenav */
+}
+  
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+body>footer {
+    background-color: rgb(246, 212, 174);
+    font: normal bold 0.9em san-serif;
+    margin-top: auto;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+}
+    
+footer > p{
+        margin-left: 1px;
+        font-size: 15px;
+        line-height: 1;
+        font-family: sans-serif;
+}
+
+
+
+/* Centered text */
+.centered {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 60px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+
+
+  /*Change the color of shop name*/
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff6f6ea, 0 0 20px #fff, 0 0 30px #70040477, 0 0 40px #70040477, 0 0 50px#70040477, 0 0 60px #70040477, 0 0 70px #70040477;
+    }
+    
+    to {
+      text-shadow: 0 0 20px #ffebebe9, 0 0 30px  #fffffff0, 0 0 40px #9c303083, 0 0 50px  #9c303083, 0 0 60px  #9c303083, 0 0 70px  #9c303083, 0 0 80px  #9c303083;
+    }
+  }

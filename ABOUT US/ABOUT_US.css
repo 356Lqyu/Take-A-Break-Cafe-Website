@@ -1,0 +1,161 @@
+@charset "utf-8";
+
+html{
+    max-width: 1024px;
+    max-height: 768px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-image:url("background5.jpg");
+    background-attachment: fixed;
+    background-size: 40%;
+}
+
+header > nav >ul li{
+    display: flex;
+	float: left;
+    background-color: antiquewhite;
+    padding-top: 30px;
+    padding-left: 19.3px;
+    padding-right: 5px;
+    padding-bottom: 34px;
+    font-family: sans-serif;
+    font-size: 16px;
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+.img{
+    float: left;
+    padding-left: 15px;
+    background-color: antiquewhite;
+}
+
+section{
+    background-image:url("background2.jpg");
+    background-repeat:round;
+    background-attachment:inherit;
+    background-attachment: fixed;
+    padding-bottom: 50px;
+}
+
+
+
+
+h1{
+  
+    text-align: center;
+    font-size:50px;
+    color:rgb(104,17,17);
+    background-color: #EED4A9;
+    margin-top: auto;
+    padding-top: 2%;
+    padding-bottom: 5%;
+    border: 6px dotted chocolate;
+}
+
+h2{
+    font-size: 30px;
+    text-align: left;
+    color: rgb(31,23 ,152);
+    font-variant: small-caps;
+    margin-left: 15px;
+}
+
+article > p{
+    font-size: 20px;
+    font-family: Garamond, serif;
+    margin: 0px 30px 10px 30px;
+    line-height: 30px;
+}
+
+article >  img{
+    border-radius: 10%;
+    float: inline-start;
+    margin: 30px 10px 20px 60px;
+    padding-left: 0px;
+}
+
+article.barista img{
+    float: left;
+    margin: 15px 30px 15px 50px;
+    clear: left;
+    border-radius: 80px;
+
+}
+
+.barista > article > p{
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+
+}
+
+
+img:hover {
+    box-shadow: 0 0 20px 0px rgba(42, 31, 31, 0.628);
+    transition: 0.3s;
+}
+
+
+img.emoji {
+    box-shadow: none;
+}
+
+
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+    opacity: 1;
+    animation: fadeIn 0.5s ease-in-out forwards; /* Use a CSS animation */
+  }
+  
+  @keyframes fadeIn {
+      from {
+          opacity: 0;
+      }
+      to {
+          opacity: 1;
+      }
+  }
+
+
+
+
+  /*add on the mission and vision*/
+body > section > aside {
+    color: rgb(226, 197, 132); 
+    margin: 20px 20px 20px 25px;
+    background-color: rgba(53, 35, 10, 0.829);
+    margin-bottom: 80px;
+    border-radius: 35px;
+    padding: 20px;
+    width: 45%;
+    float: left;
+ }
+ 
+ body > section > aside > h3 {
+    font-size: 30px;
+    border: none;
+    border-style: none;
+    font-weight: normal;
+    font-variant: small-caps;
+    text-align: center;
+    padding-left: 20px;
+    padding-top: 0px;
+    margin-bottom: 15px;
+    color: rgb(255, 255, 255) ;
+ }
+ 
+ body > section > aside > p {
+    font-size: 18px;
+    font-family: 'Times New Roman', serif;
+    font-style: italic;
+    margin: 0px 30px 10px 30px;
+    line-height: 25px;
+ }

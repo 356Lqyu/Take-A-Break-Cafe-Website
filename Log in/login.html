@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TAKE A BREAK - LOG IN</title>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.css" rel="stylesheet">
+    <link href="login.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="form-box">
+        <h1>LOG IN</h1>
+        <form >
+            <div class="input2">
+                <i class="fa fa-envelope"></i>
+                <input name="email" id="emailBox" type="email" placeholder="Enter your email" required />
+            </div>
+
+            <div class="input2">
+                <i class="fa fa-key"></i>
+                <input name="password" id="passwordBox" type="password" placeholder="Password (6 digits)" required />
+            </div>
+
+            <p>Forget password? <a href="#">Click Here!</a></p>
+
+            <div class="btn-input">
+                <button type="button" id="loginBtn" class="sign">Sign in</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
+
+
+    <script>
+        function loginUser() {
+            var email = document.getElementById("emailBox").value;
+            var password = document.getElementById("passwordBox").value;
+    
+            // Retrieve user data from local storage
+            var storedEmail = localStorage.getItem("user_email");
+            var storedPassword = localStorage.getItem("user_password");
+    
+            if (email === storedEmail && password === storedPassword) {
+                alert("Login successful. Redirecting to member page...");
+                
+                // Redirect to the member page
+                window.location.href = "../Member/member.html";
+            } else {
+                alert("Login failed. Please check your email and password.");
+            }
+        }
+    
+        document.getElementById("loginBtn").addEventListener("click", loginUser);
+    </script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    width: 1024px;
+    height: 768px;
+    margin:0% auto;
+    box-sizing:border-box ;
+    font-family: sans-serif;
+    background-image:url("/FAQ/background5.jpg");
+    background-attachment: fixed;
+    background-size: 100%;
+}
+
+
+@keyframes growAndFade {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+    opacity: 1;
+    animation: fadeIn 0.5s ease-in-out forwards; /* Use a CSS animation */
+  }
+
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+@keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff6f6ea, 0 0 20px #fff, 0 0 30px #70040477, 0 0 40px #70040477, 0 0 50px#70040477, 0 0 60px #70040477, 0 0 70px #70040477;
+    }
+    
+    to {
+      text-shadow: 0 0 20px #ffebebe9, 0 0 30px  #fffffff0, 0 0 40px #9c303083, 0 0 50px  #9c303083, 0 0 60px  #9c303083, 0 0 70px  #9c303083, 0 0 80px  #9c303083;
+    }
+  }
+
+  .centered {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 60px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+
+.menu-bar
+{
+    margin:10;
+    background-color: antiquewhite;
+    text-align: center;
+}
+
+.menu-bar ul {
+    display: inline-flex;
+    list-style: none;
+    color: black;
+    align-items: center;  
+}
+
+.logo {
+    vertical-align: middle; 
+}
+
+.menu-bar ul li{
+    padding-left: 2.5px;
+    padding-right: 3.5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin:5px;
+}
+
+.menu-bar ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.active, .menu-bar ul li a:hover
+{   
+    
+    border-radius: 1px;
+    color:brown;
+}
+
+.menu-bar .fa{
+    margin-right: 0.6px;
+}
+
+.sub-menu-1{
+    display: none;
+    z-index: 9999; 
+}
+
+.menu-bar ul li:hover .sub-menu-1{
+    display: block;
+    position: absolute;
+    background-color:burlywood ;
+    border-radius: 3px;
+    margin-left: 2px;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul{
+    display: block;
+    margin: 7px;
+    
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li{
+    width: 175px;
+    padding: 5px;
+    border-bottom: 1px dotted #fff ;
+    background: transparent;
+    border-radius:0 ;
+    text-align: left;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child{
+    border-bottom: none;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover{
+    color: #fff;
+}
+
+.fa-angle-right{
+    float:right ;
+}
+
+.sub-menu-2{
+    display: none;
+    z-index: 9999; 
+}
+
+.hover-me:hover .sub-menu-2{
+    position:absolute;
+    display: block;
+    margin-top: auto;
+    margin-left: 180px;
+    background-color:tan;
+}
+
+
+#searchForm button {
+  background-color: transparent;
+  border: transparent;
+  padding-left: 0px;
+  padding-right: 1px;
+}
+
+
+#searchForm button:hover {
+  transform: scale(1.5);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
